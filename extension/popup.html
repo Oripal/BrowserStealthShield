@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BrowserStealthShield</title>
+  <link rel="stylesheet" href="popup.css">
+  <script type="module" src="popup.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="mark" aria-hidden="true">◈</div>
+      <div>
+        <h1>BrowserStealthShield</h1>
+        <p>浏览器地理位置隐私 · v0.1</p>
+      </div>
+    </header>
+
+    <section class="panel" aria-labelledby="geo-heading">
+      <div class="section-title"><h2 id="geo-heading">精确定位权限</h2><span id="geo-badge" class="badge">检查中</span></div>
+      <p class="hint">使用 Chrome 原生权限，设置网页定位请求的默认规则。</p>
+      <p class="status" id="geo-summary">正在读取…</p>
+      <p class="small" id="site-summary">正在检查当前网站…</p>
+      <div class="actions">
+        <button id="geo-enable" class="primary" type="button">默认阻止定位</button>
+        <button id="geo-reset" type="button">移除本扩展规则</button>
+      </div>
+      <p class="note">单个网站的已有权限、组织策略或无痕设置可能覆盖通用规则，请检查当前网站的实际状态。</p>
+    </section>
+
+    <section class="panel" aria-labelledby="rtc-heading">
+      <div class="section-title"><h2 id="rtc-heading">WebRTC 地址隐私</h2><span id="rtc-badge" class="badge">检查中</span></div>
+      <p class="status" id="rtc-summary">正在读取…</p>
+      <div class="actions">
+        <button id="rtc-enable" class="primary" type="button">限制非代理 UDP</button>
+        <button id="rtc-reset" type="button">移除本扩展规则</button>
+      </div>
+      <p class="note">可能影响音视频或 P2P 连接；不会隐藏 HTTP 请求的出口 IP，也不保证所有地址均不可见。</p>
+    </section>
+
+    <div class="footer-actions">
+      <button id="open-test" class="link-button" type="button">打开本地测试说明 ↗</button>
+    </div>
+    <div id="feedback" role="status" aria-live="polite"></div>
+    <footer>不注入网页脚本 · 不收集位置 · 无后台联网</footer>
+  </main>
+</body>
+</html>

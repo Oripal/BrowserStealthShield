@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "BrowserStealthShield",
+  "short_name": "BSS Privacy",
+  "version": "0.1.0",
+  "minimum_chrome_version": "120",
+  "description": "Location permission and WebRTC address privacy controls. No fingerprint spoofing or external calls.",
+  "permissions": ["contentSettings", "privacy", "storage", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "BrowserStealthShield · 位置隐私"
+  }
+}
